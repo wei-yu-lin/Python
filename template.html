@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<title>大樂透每期號碼</title>
+<body>
+
+<div class="page">
+    <div class="banner">
+        <div class="ui stackable four column grid">
+            <div class="ui inverted segment">
+            <div class="column">開出順序{{seq}}
+                % for item in items: 
+                    <div class="ui inverted relaxed divided list">                        
+                        <div class="item">
+                            <div>
+                                <span class= "banner-item-name">{{item}}</span>                                
+                            </div>
+                        </div>                         
+                    </div>
+                    %end     
+                </div>
+                         
+            </div>   
+        </div>
+    </div>
+</div>
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/semantic-ui/2.4.1/semantic.min.js"></script>
+<script>
+    function mouseOver(id){
+        $('#'+id)
+        .popup({
+            duration:0
+        })
+        .popup('show')
+    }
+
+    // 30秒刷新
+    setTimeout(function(){
+        window.location.reload();
+    }, 30000)
+</script>
+</body>
+</html>
