@@ -2,6 +2,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <title>大樂透每期號碼</title>
@@ -10,8 +11,9 @@
 <div class="page">
     <div class="banner">
         <div class="ui stackable four column grid">
+            <div class="column">
             <div class="ui inverted segment">
-            <div class="column">開出順序{{seq}}
+            <div class="">開出順序{{seq}}
                 % for item in items: 
                     <div class="ui inverted relaxed divided list">                        
                         <div class="item">
@@ -21,8 +23,8 @@
                         </div>                         
                     </div>
                     %end     
-                </div>
-                         
+                </div>     
+            </div>                    
             </div>   
         </div>
     </div>
