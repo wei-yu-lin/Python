@@ -10,23 +10,25 @@
 
 <div class="page">
     <div class="banner">
+        % for seq,item in enumerate(items): 
         <div class="ui stackable four column grid">
             <div class="column">
             <div class="ui inverted segment">
-            <div class="">開出順序{{seq}}
-                % for item in items: 
+                <div class="">開出順序{{seq+1}}
                     <div class="ui inverted relaxed divided list">                        
                         <div class="item">
-                            <div>
-                                <span class= "banner-item-name">{{item}}</span>                                
+                          % for i in item:   
+                            <div>                                
+                                <span class= "banner-item-name">{{i}}</span>                                
                             </div>
+                          % end  
                         </div>                         
                     </div>
-                    %end     
                 </div>     
             </div>                    
-            </div>   
-        </div>
+        </div>   
+    </div>
+    %end     
     </div>
 </div>
 <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
